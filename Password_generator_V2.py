@@ -25,13 +25,20 @@ pass_rand   = ''
 # And Finally choose randomly just the length of the size as it was inserted by the user from the size_aux's String
 # The number 4 is because there are 4 types of characters
 
-def divisible_by_4(size):
+"""def divisible_by_4(size):
     if(size%4==0):
         return size
     else:
         return divisible_by_4(size+1)
+"""
+# the best way to find the divisible by 4 is here
+def divisible_best_way(size):
+    if(size%4==0):
+        return size
+    else:
+        return size+(size%4)
 
-size_aux = divisible_by_4(size) # Here, i Know that size_aux is divisible by 4
+size_aux = divisible_best_way(size) # Here, i Know that size_aux is divisible by 4
 parts = int(size_aux/4)
 
 for i in range(parts):
